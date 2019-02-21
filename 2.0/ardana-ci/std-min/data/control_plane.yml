@@ -159,6 +159,7 @@
             - magnum-api
             - magnum-conductor
             - manila-api
+            - manila-share
 
       resources:
         - name: compute
@@ -173,4 +174,3 @@
             - neutron-metadata-agent
             - neutron-openvswitch-agent
             - neutron-lbaasv2-agent
-            - manila-share

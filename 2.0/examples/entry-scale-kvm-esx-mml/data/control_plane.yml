@@ -101,6 +101,7 @@
             - magnum-conductor
             #- manila-api
             #- manila-client
+            #- manila-share
 
         - name: cluster2
           cluster-prefix: c2
@@ -151,7 +152,6 @@
             - nova-compute-kvm
             - neutron-openvswitch-agent
             - neutron-lbaasv2-agent
-            #- manila-share
 
         - name: esx-compute
           resource-prefix: esx-comp
