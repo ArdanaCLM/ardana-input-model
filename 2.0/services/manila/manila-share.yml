@@ -22,38 +22,11 @@ service-components:
 -   name: manila-share
     mnemonic: MNL-SHR
     service: manila
-
-    consumes-services:
-    -   service-name: FND-MDB
-
-    -   service-name: FND-RMQ
-
-    -   service-name: KEY-API
-        relationship-vars:
-        -   name: keystone_manila_user
-            value: manila
-        -   name: keystone_manila_password
-            value: '%random-password%'
-            properties:
-                max-length: 12
-                min-length: 8
-        -   name: keystone_manilainternal_user
-            value: manilainternal
-        -   name: keystone_manilainternal_tenant
-            value: manilainternal
-        -   name: keystone_manilainternal_password
-            value: '%random-password%'
-            properties:
-                max-length: 12
-                min-length: 8
-
-    -   service-name: CND-API
-        optional: true
-    -   service-name: GLA-API
-        optional: true
-    -   service-name: NEU-SVR
-        optional: true
-    -   service-name: NOV-API
-        optional: true
-    -   service-name: MNL-API
-        optional: true
+    hidden: true
+    warnings:
+      - >
+        'manila-share' service component is deprecated.
+        The 'manila-share' service component can be removed as manila
+        share service will be deployed where manila-api is specified.
+        This is not a deprecation for openstack-manila-share but just
+        an entry deprecation in input model.
