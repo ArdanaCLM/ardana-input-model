@@ -52,7 +52,7 @@
 
         - provider: ip-cluster
           name: external-lb
-          external-name: myardana.test
+          #external-name: myardana.test
           tls-components:
             - default
           roles:

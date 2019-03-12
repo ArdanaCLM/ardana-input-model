@@ -50,7 +50,7 @@
 
         - name: extlb
           provider: ip-cluster
-          external-name: myardana-cp-shared.test
+          #external-name: myardana-cp-shared.test
           cert-file: my-public-cp-shared-cert
           tls-components:
             - default
