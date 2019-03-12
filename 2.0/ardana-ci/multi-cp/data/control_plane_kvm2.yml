@@ -53,7 +53,7 @@
 
         - name: extlb
           provider: ip-cluster
-          external-name: myardana-cp-kvm2.test
+          #external-name: myardana-cp-kvm2.test
           cert-file: my-public-cp-kvm2-cert
           tls-components:
             - default

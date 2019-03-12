@@ -60,7 +60,7 @@
 
         - provider: ip-cluster
           name: extlb
-          external-name: myardana.test
+          #external-name: myardana.test
           tls-components:
             - default
           roles:

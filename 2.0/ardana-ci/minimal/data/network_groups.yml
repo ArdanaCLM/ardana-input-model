@@ -53,7 +53,7 @@
 
         - provider: ip-cluster
           name: extlb
-          external-name: myardana.test
+          #external-name: myardana.test
           components:
             - default
           roles:
