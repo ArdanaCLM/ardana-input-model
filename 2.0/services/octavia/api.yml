@@ -1,6 +1,6 @@
 #
 # (c) Copyright 2015-2016 Hewlett Packard Enterprise Development LP
-# (c) Copyright 2017 SUSE LLC
+# (c) Copyright 2017-2019 SUSE LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may
 # not use this file except in compliance with the License. You may obtain
@@ -22,6 +22,14 @@ service-components:
 -   name: octavia-api
     mnemonic: OCT-API
     service: octavia
+
+    advertises-to-services:
+    -   service-name: KEY-API
+        entries:
+        -   service-name: octavia
+            service-type: load-balancer
+            service-description: "OpenStack Loadbalancer Service (created via octavia-deploy)"
+            url-suffix: "/"
 
     consumes-services:
     -   service-name: FND-MDB
@@ -63,8 +71,23 @@ service-components:
     -  service-name: NEU-SVR
     -  service-name: NOV-API
 
+    provides-data:
+      - to:
+          - name: neutron-server
+        data:
+          - option: service_plugins
+            values:
+              - neutron_lbaas.services.loadbalancer.plugin.LoadBalancerPluginv2
 
     requires:
+    # Needed for octavia commands
+    - name: openstack-client
+      scope: host
+
+    # Needed for octavia commands
+    - name: octavia-client
+      scope: host
+
     # Needed for keystone registration of service.
     - name: keystone-client
       scope: host
@@ -90,4 +113,6 @@ service-components:
         vip-options:
         - ''
         roles:
+        - public
         - internal
+        - admin
