@@ -72,6 +72,7 @@
             - neutron-server
             - neutron-ml2-plugin
             - octavia-api
+            - octavia-client
             - octavia-health-manager
             - ntp-server
             - ops-console-web

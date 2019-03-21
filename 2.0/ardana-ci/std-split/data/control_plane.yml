@@ -80,6 +80,7 @@
             - magnum-client
             - neutron-client
             - nova-client
+            - octavia-client
             - swift-client
             - monasca-client
             - barbican-client

@@ -75,6 +75,7 @@
             - neutron-openvswitch-agent
             - neutron-client
             - octavia-api
+            - octavia-client
             - octavia-health-manager
             - horizon
             - swift-proxy
