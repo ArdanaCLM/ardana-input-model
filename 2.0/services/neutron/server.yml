@@ -75,6 +75,11 @@ service-components:
     endpoints:
     -   port: '9696'
         has-vip: true
+        vip-options:
+        - "mode http"
+        - "option httpchk GET /"
+        - "option forwardfor"
+        - "reqadd X-Forwarded-Proto:\\ https if { ssl_fc }"
         roles:
         - public
         - internal
