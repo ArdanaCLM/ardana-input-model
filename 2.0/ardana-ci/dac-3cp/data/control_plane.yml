@@ -157,4 +157,3 @@
             - neutron-l3-agent
             - neutron-metadata-agent
             - neutron-openvswitch-agent
-            - manila-share

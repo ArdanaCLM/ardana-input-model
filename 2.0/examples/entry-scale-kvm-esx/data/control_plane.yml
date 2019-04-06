@@ -128,7 +128,6 @@
             - nova-compute
             - nova-compute-kvm
             - neutron-openvswitch-agent
-            - manila-share
 
         - name: esx-compute
           resource-prefix: esx-comp
