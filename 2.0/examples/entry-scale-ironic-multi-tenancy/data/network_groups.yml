@@ -83,6 +83,18 @@
 
 
     #
+    # External VM
+    #
+    # This is the network group that will be used to provide
+    # external access to VMs (via floating IP Addresses)
+    #
+    - name: EXTERNAL-VM
+      tags:
+        - neutron.l3_agent.external_network_bridge
+        - neutron.networks.flat:
+            provider-physical-network: external
+
+    #
     # TENANT-VLAN
     #
     # This is the network group that will be used to connect baremetal nodes.
