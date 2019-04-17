@@ -112,6 +112,7 @@
           min-count: 0
           service-components:
             - neutron-openvswitch-agent
+            - neutron-l3-agent
             - nova-compute-ironic
             - nova-compute
             - ntp-client
