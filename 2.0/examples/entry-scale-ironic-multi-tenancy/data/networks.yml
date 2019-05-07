@@ -55,6 +55,11 @@
       #addresses:
       #  - 10.0.1.10-10.0.1.250
 
+    - name: EXTERNAL-VM-NET
+      vlanid: 102
+      tagged-vlan: true
+      network-group: EXTERNAL-VM
+
     - name: TENANT-VLAN-NET
       tagged-vlan: false
       network-group: TENANT-VLAN

@@ -27,6 +27,16 @@
       services:
         - neutron
       data:
+        neutron_external_networks:
+        - name: ext-net
+          cidr: 172.31.0.0/16
+          gateway: 172.31.0.1
+          allocation_pools:
+            - start: 172.31.0.128
+              end: 172.30.12.254
+          provider:
+          - network_type: flat
+            physical_network: external
         neutron_provider_networks:
         - name: prov-network
           cidr: 192.168.245.0/24
