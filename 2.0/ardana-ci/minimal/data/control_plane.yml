@@ -38,6 +38,7 @@
             - ntp-server
             - mysql
             - ip-cluster
+            - memcached
             - keystone-api
             - rabbitmq
             - tempest
