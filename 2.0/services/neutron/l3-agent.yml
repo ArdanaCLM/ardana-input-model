@@ -41,3 +41,8 @@ service-components:
             values:
               - neutron.services.l3_router.l3_router_plugin.L3RouterPlugin
               - neutron_fwaas.services.firewall.fwaas_plugin.FirewallPlugin
+
+          - option: policy_json
+            values:
+              - source: ../../neutron-l3-agent/templates/policy.d/neutron-fwaas.json.j2
+                dest: policy.d/neutron-fwaas.json
