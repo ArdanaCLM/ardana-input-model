@@ -77,7 +77,7 @@ service-components:
         data:
           - option: service_plugins
             values:
-              - neutron_lbaas.services.loadbalancer.plugin.LoadBalancerPluginv2
+              - neutron_lbaas.services.loadbalancer.proxy_plugin.LoadBalancerProxyPluginv2
 
     requires:
     # Needed for octavia commands
