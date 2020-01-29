@@ -73,6 +73,7 @@
             - nova-client
             - neutron-server
             - neutron-ml2-plugin
+            - neutron-ml2-port-security
             - neutron-client
             - octavia-api
             - octavia-client
