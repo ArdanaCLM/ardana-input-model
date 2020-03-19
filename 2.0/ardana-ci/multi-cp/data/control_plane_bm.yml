@@ -82,6 +82,7 @@
             - nova-novncproxy
             - neutron-server
             - neutron-ml2-plugin
+            - neutron-ml2-port-security
             - neutron-dhcp-agent
             - neutron-metadata-agent
             - neutron-openvswitch-agent
