@@ -51,7 +51,7 @@ services:
                 -   name: read_permissions
                     value: "^ceilometer$|^central$|^heat$|^glance$|^keystone$|^cinder$|^swift$|^magnum$|^nova$|^ironic$|^neutron$|^metering|^ceilometer-pipe-|^notifications"
                 -   name: write_permissions
-                    value: "^ceilometer$|^metering|^ceilometer-pipe-|^notifications"
+                    value: "^ceilometer$|^metering|^ceilometer-pipe-|^notifications|amq\\.default"
 
     -   service-name: FND-MDB
         relationship-vars:
